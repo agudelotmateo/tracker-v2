@@ -1,0 +1,8 @@
+<div class="jumbotron text-center">
+  <h1>Tacker</h1>
+  <p class="lead">Welcome to Tracker, an app to track your past self!</p>
+  <div *ngIf="!authService.loggedIn()">
+    <a class="btn btn-success" [routerLink]="['/register']" id="register-button">Register</a>
+    <a class="btn btn-info" [routerLink]="['/login']" id="login-button">Login</a>
+  </div>
+</div>

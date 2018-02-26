@@ -1,0 +1,8 @@
+<div id="dashboard" *ngIf="user">
+  <p></p>
+  <h2 class="page-header">Welcome, {{user.name}}!</h2>
+  <p></p>
+  <p>Chose what you want to do with you location:</p>
+  <a class="btn btn-info" [routerLink]="['/save']" id="save-button">Record</a>
+  <a class="btn btn-success" [routerLink]="['/view']" id="view-button">View</a>
+</div>

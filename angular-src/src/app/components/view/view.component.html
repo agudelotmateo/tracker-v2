@@ -1,0 +1,10 @@
+<p></p>
+<agm-map 
+  [latitude]="defaultLatitude" 
+  [longitude]="defaultLongitude">
+  <agm-marker 
+    *ngFor="let position of location"
+    [latitude]="position.latitude"
+    [longitude]="position.longitude">
+</agm-marker>
+</agm-map>

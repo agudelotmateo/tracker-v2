@@ -1,0 +1,8 @@
+#dashboard {
+    text-align: center;
+}
+
+#save-button, #view-button {
+    width: 100px;
+    margin: 0 2%;
+}

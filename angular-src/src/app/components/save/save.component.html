@@ -1,0 +1,15 @@
+<div id="save">
+  <p></p>
+  <h2 class="page-header">{{message}}</h2>
+  <div *ngIf="canRecord">
+    <p></p>
+    <p></p>
+    <p>Current Latitude: {{latitude}}
+      <br>Current Longitude: {{longitude}}</p>
+    <div *ngIf="recording">
+      <p></p>
+      <p></p>
+      <a (click)="stopRecording()" class="btn btn-danger">Stop</a>
+    </div>
+  </div>
+</div>
