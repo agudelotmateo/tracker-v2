@@ -10,12 +10,12 @@ import { Router } from '@angular/router';
 })
 export class SaveComponent implements OnInit {
   user: Object;
-  latitude: Number;
-  longitude: Number;
-  delay: Number = 1000;
-  message: String = "Loading...";
-  canRecord: Boolean = false;
-  recording: Boolean = false;
+  latitude: number;
+  longitude: number;
+  delay: number = 1000;
+  message: string = "Loading...";
+  canRecord: boolean = false;
+  recording: boolean = false;
 
   constructor(
     private authService: AuthService,

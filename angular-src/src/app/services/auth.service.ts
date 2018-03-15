@@ -8,7 +8,7 @@ export class AuthService {
   authToken: any;
   user: any;
   timer: any;
-  apiKey: String = "qKV4qBykvFmdVVpUcQ1w";
+  apiKey: string = "qKV4qBykvFmdVVpUcQ1w";
 
   constructor(private http: Http) { }
 

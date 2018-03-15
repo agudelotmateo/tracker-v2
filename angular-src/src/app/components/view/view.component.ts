@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ViewComponent implements OnInit {
   location: Object;
-  defaultLatitude:Number = 6.199548;
-  defaultLongitude: Number = -75.57934;
+  defaultLatitude: number = 6.199548;
+  defaultLongitude: number = -75.57934;
 
   constructor(private authService: AuthService, private router: Router) { }
 
