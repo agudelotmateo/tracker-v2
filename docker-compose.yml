@@ -2,13 +2,15 @@ version: '2' # specify docker-compose version
 
 # Define the services/containers to be run
 services:
-  # nginx:
-  #   container_name: nginx-server
-  #   image: nginx
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - express
+  nginx:
+    container_name: nginx-server
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - express
 
   angular: # name of the first service
     build: angular-src # specify the directory of the Dockerfile
@@ -17,8 +19,8 @@ services:
 
   express: #name of the second service
     build: . # specify the directory of the Dockerfile
-    ports:
-      - "3000:3000" #specify ports forewarding
+    # ports:
+    #   - "3000:3000" #specify ports forewarding
     links:
       - database # link this service to the database service
     depends_on:
