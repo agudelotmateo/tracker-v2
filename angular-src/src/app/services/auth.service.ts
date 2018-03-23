@@ -15,7 +15,7 @@ export class AuthService {
   recordLocation(location) {
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
-    let url = "users/record/" + this.apiKey;
+    let url = "http://localhost:3000/users/record/" + this.apiKey;
     return this.http.post(url, location, { headers: headers }).map(function (res) {
       return res.json();
     });
@@ -24,7 +24,7 @@ export class AuthService {
   registerUser(user) {
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
-    let url = "users/register/" + this.apiKey;
+    let url = "http://localhost:3000/users/register/" + this.apiKey;
     return this.http.post(url, user, { headers: headers }).map(function (res) {
       return res.json();
     });
@@ -33,7 +33,7 @@ export class AuthService {
   authenticateUser(user) {
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
-    let url = "users/authenticate/" + this.apiKey;
+    let url = "http://localhost:3000/users/authenticate/" + this.apiKey;
     return this.http.post(url, user, { headers: headers }).map(function (res) {
       return res.json();
     });
@@ -44,7 +44,7 @@ export class AuthService {
     this.loadToken();
     headers.append("Authorization", this.authToken);
     headers.append("Content-Type", "application/json");
-    let url = "users/profile/" + this.apiKey;
+    let url = "http://localhost:3000/users/profile/" + this.apiKey;
     return this.http.get(url, { headers: headers }).map(function (res) {
       return res.json();
     });
@@ -55,7 +55,7 @@ export class AuthService {
     this.loadToken();
     headers.append("Authorization", this.authToken);
     headers.append("Content-Type", "application/json");
-    let url = "users/location/" + this.apiKey;
+    let url = "http://localhost:3000/users/location/" + this.apiKey;
     url += "/" + localStorage.getItem("username");
     return this.http.get(url, { headers: headers }).map(function (res) {
       return res.json();
