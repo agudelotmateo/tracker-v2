@@ -1,3 +1,6 @@
+# OUTDATED README
+This README.md was written for **trackermateo** (aka **tracker-v1**) and hasn't been updated ever since. 
+
 # Description
 Trackermateo is an app created by Mateo Agudelo Toro which allows its users to record their locations and also see them later on Google Maps.
 When they decide to *record*, their position is saved every 1 second. Then, when they want to see their past, they can use the *view* option  and the positions they have recorded will be shown in Google Maps.
