@@ -16,7 +16,7 @@ router.post("/record/:apiKey", function (req, res, next) {
         let newLocation = new Location({
             latitude: req.body.latitude,
             longitude: req.body.longitude,
-            username: req.body.username
+            userID: req.body.userID
         });
         Location.addLocation(newLocation, function (err, user) {
             if (err) {
@@ -108,9 +108,9 @@ router.get("/profile/:apiKey", passport.authenticate("jwt", { session: false }),
 });
 
 // '/users/location' route
-router.get("/location/:apiKey/:username", passport.authenticate("jwt", { session: false }), function (req, res, next) {
+router.get("/location/:apiKey/:userID", passport.authenticate("jwt", { session: false }), function (req, res, next) {
     if (keys.apiKeys.has(req.params.apiKey))
-        Location.find({ "username": req.params.username }, function (err, location) {
+        Location.find({ "userID": req.params.userID }, function (err, location) {
             if (err)
                 throw err;
             else

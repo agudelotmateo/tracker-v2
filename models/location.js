@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 const LocationSchema = mongoose.Schema({
-    username: {
+    userID: {
         type: String,
         required: true
     },

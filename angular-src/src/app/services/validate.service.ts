@@ -23,12 +23,12 @@ export class ValidateService {
 
   validateLocation(location) {
     if (location.latitude === undefined || location.longitude === undefined ||
-      location.username === undefined)
+      location.userID === undefined)
       return false;
 
     if (location.latitude === null ||
       location.longitude === null ||
-      location.username === null)
+      location.userID === null)
       return false;
 
     return true;

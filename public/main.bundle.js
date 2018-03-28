@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <p></p>\r\n  <flash-messages></flash-messages>\r\n  <p></p>\r\n  <router-outlet></router-outlet>\r\n</div>"
+module.exports = "<app-navbar></app-navbar>\n<div class=\"container\">\n  <p></p>\n  <flash-messages></flash-messages>\n  <p></p>\n  <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -180,7 +180,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#dashboard {\r\n    text-align: center;\r\n}\r\n\r\n#save-button, #view-button {\r\n    width: 100px;\r\n    margin: 0 2%;\r\n}\r\n", ""]);
+exports.push([module.i, "#dashboard {\n    text-align: center;\n}\n\n#save-button, #view-button {\n    width: 100px;\n    margin: 0 2%;\n}\n", ""]);
 
 // exports
 
@@ -254,7 +254,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#register-button, #login-button {\r\n    width: 100px;\r\n    margin: 0 2%;\r\n}\r\n", ""]);
+exports.push([module.i, "#register-button, #login-button {\n    width: 100px;\n    margin: 0 2%;\n}\n", ""]);
 
 // exports
 
@@ -318,7 +318,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#login-header {\r\n    text-align: center;\r\n}\r\n\r\n#login-submit {\r\n    width: 50%;\r\n    margin: 0 25%;\r\n}\r\n", ""]);
+exports.push([module.i, "#login-header {\n    text-align: center;\n}\n\n#login-submit {\n    width: 50%;\n    margin: 0 25%;\n}\n", ""]);
 
 // exports
 
@@ -501,7 +501,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\r\n  <p></p>\r\n  <h2 class=\"page-header\">Welcome, {{user.name}}!</h2>\r\n  <p></p>\r\n  <ul class=\"list-group\">\r\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\r\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\r\n  </ul>\r\n</div>"
+module.exports = "<div *ngIf=\"user\">\n  <p></p>\n  <h2 class=\"page-header\">Welcome, {{user.name}}!</h2>\n  <p></p>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>"
 
 /***/ }),
 
@@ -562,7 +562,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#register-header {\r\n    text-align: center;\r\n}\r\n\r\n#register-submit {\r\n    width: 50%;\r\n    margin: 0 25%;\r\n}\r\n", ""]);
+exports.push([module.i, "#register-header {\n    text-align: center;\n}\n\n#register-submit {\n    width: 50%;\n    margin: 0 25%;\n}\n", ""]);
 
 // exports
 
@@ -667,7 +667,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#save {\r\n    text-align: center;\r\n}\r\n", ""]);
+exports.push([module.i, "#save {\n    text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -680,7 +680,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/save/save.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"save\">\r\n  <p></p>\r\n  <h2 class=\"page-header\">{{message}}</h2>\r\n  <div *ngIf=\"canRecord\">\r\n    <p></p>\r\n    <p></p>\r\n    <p>Current Latitude: {{latitude}}\r\n      <br>Current Longitude: {{longitude}}</p>\r\n    <div *ngIf=\"recording\">\r\n      <p></p>\r\n      <p></p>\r\n      <a (click)=\"stopRecording()\" class=\"btn btn-danger\">Stop</a>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div id=\"save\">\n  <p></p>\n  <h2 class=\"page-header\">{{message}}</h2>\n  <div *ngIf=\"canRecord\">\n    <p></p>\n    <p></p>\n    <p>Current Latitude: {{latitude}}\n      <br>Current Longitude: {{longitude}}</p>\n    <div *ngIf=\"recording\">\n      <p></p>\n      <p></p>\n      <a (click)=\"stopRecording()\" class=\"btn btn-danger\">Stop</a>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -724,7 +724,7 @@ var SaveComponent = /** @class */ (function () {
             var location = {
                 latitude: _this.latitude,
                 longitude: _this.longitude,
-                username: localStorage.getItem("username")
+                userID: localStorage.getItem("userID")
             };
             if (_this.validateService.validateLocation(location))
                 _this.authService.recordLocation(location).subscribe();
@@ -791,7 +791,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "agm-map {\r\n    height: 400px;\r\n}\r\n", ""]);
+exports.push([module.i, "agm-map {\n    height: 400px;\n}\n", ""]);
 
 // exports
 
@@ -804,7 +804,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view/view.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p></p>\r\n<agm-map \r\n  [latitude]=\"defaultLatitude\" \r\n  [longitude]=\"defaultLongitude\">\r\n  <agm-marker \r\n    *ngFor=\"let position of location\"\r\n    [latitude]=\"position.latitude\"\r\n    [longitude]=\"position.longitude\">\r\n</agm-marker>\r\n</agm-map>"
+module.exports = "<p></p>\n<agm-map \n  [latitude]=\"defaultLatitude\" \n  [longitude]=\"defaultLongitude\">\n  <agm-marker \n    *ngFor=\"let position of location\"\n    [latitude]=\"position.latitude\"\n    [longitude]=\"position.longitude\">\n</agm-marker>\n</agm-map>"
 
 /***/ }),
 
@@ -971,7 +971,7 @@ var AuthService = /** @class */ (function () {
         headers.append("Authorization", this.authToken);
         headers.append("Content-Type", "application/json");
         var url = "users/location/" + this.apiKey;
-        url += "/" + localStorage.getItem("username");
+        url += "/" + localStorage.getItem("userID");
         return this.http.get(url, { headers: headers }).map(function (res) {
             return res.json();
         });
@@ -981,7 +981,7 @@ var AuthService = /** @class */ (function () {
         localStorage.setItem("user", JSON.stringify(user));
         // angular2-jwt looks for this name
         localStorage.setItem("token", token);
-        localStorage.setItem("username", user.username);
+        localStorage.setItem("userID", user.id);
         this.user = user;
         this.authToken = token;
     };
@@ -1043,11 +1043,11 @@ var ValidateService = /** @class */ (function () {
     };
     ValidateService.prototype.validateLocation = function (location) {
         if (location.latitude === undefined || location.longitude === undefined ||
-            location.username === undefined)
+            location.userID === undefined)
             return false;
         if (location.latitude === null ||
             location.longitude === null ||
-            location.username === null)
+            location.userID === null)
             return false;
         return true;
     };

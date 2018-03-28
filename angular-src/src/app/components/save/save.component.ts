@@ -29,9 +29,9 @@ export class SaveComponent implements OnInit {
       let location = {
         latitude: this.latitude,
         longitude: this.longitude,
-        username: localStorage.getItem("username")
+        userID: localStorage.getItem("userID")
       }
-      if (this.validateService.validateLocation(location))
+      if (this.validateService.validateLocation(location)) 
         this.authService.recordLocation(location).subscribe();
     }, this.delay);
     this.recording = true;

@@ -56,7 +56,7 @@ export class AuthService {
     headers.append("Authorization", this.authToken);
     headers.append("Content-Type", "application/json");
     let url = "users/location/" + this.apiKey;
-    url += "/" + localStorage.getItem("username");
+    url += "/" + localStorage.getItem("userID");
     return this.http.get(url, { headers: headers }).map(function (res) {
       return res.json();
     });
@@ -67,7 +67,7 @@ export class AuthService {
     localStorage.setItem("user", JSON.stringify(user));
     // angular2-jwt looks for this name
     localStorage.setItem("token", token);
-    localStorage.setItem("username", user.username);
+    localStorage.setItem("userID", user.id);
     this.user = user;
     this.authToken = token;
   }
