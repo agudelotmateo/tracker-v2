@@ -8,15 +8,13 @@ export class AuthService {
   authToken: any;
   user: any;
   timer: any;
-  apiKey: string = "qKV4qBykvFmdVVpUcQ1w";
 
   constructor(private http: Http) { }
 
   recordLocation(location) {
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
-    let url = "users/record/" + this.apiKey;
-    return this.http.post(url, location, { headers: headers }).map(function (res) {
+    return this.http.post("users/record", location, { headers: headers }).map(function (res) {
       return res.json();
     });
   }
@@ -24,8 +22,7 @@ export class AuthService {
   registerUser(user) {
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
-    let url = "users/register/" + this.apiKey;
-    return this.http.post(url, user, { headers: headers }).map(function (res) {
+    return this.http.post("users/register", user, { headers: headers }).map(function (res) {
       return res.json();
     });
   }
@@ -33,8 +30,7 @@ export class AuthService {
   authenticateUser(user) {
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
-    let url = "users/authenticate/" + this.apiKey;
-    return this.http.post(url, user, { headers: headers }).map(function (res) {
+    return this.http.post("users/authenticate", user, { headers: headers }).map(function (res) {
       return res.json();
     });
   }
@@ -44,8 +40,7 @@ export class AuthService {
     this.loadToken();
     headers.append("Authorization", this.authToken);
     headers.append("Content-Type", "application/json");
-    let url = "users/profile/" + this.apiKey;
-    return this.http.get(url, { headers: headers }).map(function (res) {
+    return this.http.get("users/profile", { headers: headers }).map(function (res) {
       return res.json();
     });
   }
@@ -55,9 +50,7 @@ export class AuthService {
     this.loadToken();
     headers.append("Authorization", this.authToken);
     headers.append("Content-Type", "application/json");
-    let url = "users/location/" + this.apiKey;
-    url += "/" + localStorage.getItem("userID");
-    return this.http.get(url, { headers: headers }).map(function (res) {
+    return this.http.get("users/location/" + localStorage.getItem("userID"), { headers: headers }).map(function (res) {
       return res.json();
     });
   }
